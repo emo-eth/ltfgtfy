@@ -5,25 +5,22 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Tell me the story',
-    },
-    {
-      label: 'Redirect to cute dog pictures',
+      label: 'Search',
       action: 'post_redirect',
     },
   ],
   image: `${NEXT_PUBLIC_URL}/park-1.png`,
   input: {
-    text: 'Tell me a boat story',
+    text: 'enter search term'
   },
   post_url: `${NEXT_PUBLIC_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
-  description: 'LFG',
+  title: 'google frame',
+  description: 'LFGoogle',
   openGraph: {
-    title: 'zizzamia.xyz',
+    title: 'google search',
     description: 'LFG',
     images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
