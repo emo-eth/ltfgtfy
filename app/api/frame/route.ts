@@ -23,6 +23,13 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       { status: 302 },
     );
   }
+  if (message?.button === 2) {
+    return NextResponse.redirect(
+      `https://www.google.com/search?q=${text.split(' ').join('+')}+&btnI=I%27m+Feeling+Lucky`,
+      { status: 302 },
+    );
+    
+  }
 
   return new NextResponse(
     getFrameHtmlResponse({
@@ -31,7 +38,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
           label: `🌲 Text: ${text}`,
         },
       ],
-      image: `${NEXT_PUBLIC_URL}/park-2.png`,
+      image: `${NEXT_PUBLIC_URL}/public.png`,
       post_url: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
   );

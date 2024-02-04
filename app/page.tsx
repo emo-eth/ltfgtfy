@@ -8,8 +8,12 @@ const frameMetadata = getFrameMetadata({
       label: 'Search',
       action: 'post_redirect',
     },
+    {
+      label: "I'm feeling lucky",
+      action: 'post_redirect',
+    }
   ],
-  image: `${NEXT_PUBLIC_URL}/park-1.png`,
+  image: `${NEXT_PUBLIC_URL}/public.png`,
   input: {
     text: 'enter search term'
   },
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'google search',
     description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [`${NEXT_PUBLIC_URL}/public.png`],
   },
   other: {
     ...frameMetadata,
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>emo.eth</h1>
     </>
   );
 }
